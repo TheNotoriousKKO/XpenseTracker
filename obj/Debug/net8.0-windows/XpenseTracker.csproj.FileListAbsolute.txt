@@ -139,3 +139,6 @@ C:\Users\janek\Desktop\XpenseTracker\obj\Debug\net8.0-windows\refint\XpenseTrack
 C:\Users\janek\Desktop\XpenseTracker\obj\Debug\net8.0-windows\XpenseTracker.pdb
 C:\Users\janek\Desktop\XpenseTracker\obj\Debug\net8.0-windows\XpenseTracker.genruntimeconfig.cache
 C:\Users\janek\Desktop\XpenseTracker\obj\Debug\net8.0-windows\ref\XpenseTracker.dll
+C:\Users\janek\Desktop\XpenseTracker\obj\Debug\net8.0-windows\XpenseTracker.sourcelink.json
+C:\Users\janek\Desktop\XpenseTracker\obj\Debug\net8.0-windows\XpenseTracker.MainForm.resources
+C:\Users\janek\Desktop\XpenseTracker\obj\Debug\net8.0-windows\XpenseTracker.csproj.GenerateResource.cache
