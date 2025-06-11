@@ -41,17 +41,17 @@ partial class MainForm
         // 
         dataGridViewExpenses.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         dataGridViewExpenses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dataGridViewExpenses.Location = new Point(12, 71);
+        dataGridViewExpenses.Location = new Point(12, 42);
         dataGridViewExpenses.Name = "dataGridViewExpenses";
         dataGridViewExpenses.RowHeadersWidth = 62;
-        dataGridViewExpenses.Size = new Size(848, 504);
+        dataGridViewExpenses.Size = new Size(837, 528);
         dataGridViewExpenses.TabIndex = 0;
         dataGridViewExpenses.CellContentClick += dataGridView1_CellContentClick;
         // 
         // btnAdd
         // 
         btnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-        btnAdd.Location = new Point(12, 581);
+        btnAdd.Location = new Point(12, 576);
         btnAdd.Name = "btnAdd";
         btnAdd.Size = new Size(99, 31);
         btnAdd.TabIndex = 1;
@@ -62,7 +62,7 @@ partial class MainForm
         // btnEdit
         // 
         btnEdit.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-        btnEdit.Location = new Point(117, 581);
+        btnEdit.Location = new Point(117, 576);
         btnEdit.Name = "btnEdit";
         btnEdit.Size = new Size(99, 31);
         btnEdit.TabIndex = 2;
@@ -73,7 +73,7 @@ partial class MainForm
         // btnDelete
         // 
         btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-        btnDelete.Location = new Point(222, 581);
+        btnDelete.Location = new Point(222, 576);
         btnDelete.Name = "btnDelete";
         btnDelete.Size = new Size(99, 31);
         btnDelete.TabIndex = 3;
@@ -84,7 +84,7 @@ partial class MainForm
         // 
         label.AutoSize = true;
         label.Font = new Font("Franklin Gothic Demi", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
-        label.Location = new Point(12, 20);
+        label.Location = new Point(12, 9);
         label.Name = "label";
         label.Size = new Size(175, 30);
         label.TabIndex = 4;
@@ -93,17 +93,16 @@ partial class MainForm
         // dateTimePicker1
         // 
         dateTimePicker1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-        dateTimePicker1.Location = new Point(327, 581);
+        dateTimePicker1.Location = new Point(327, 576);
         dateTimePicker1.Name = "dateTimePicker1";
         dateTimePicker1.Size = new Size(379, 31);
         dateTimePicker1.TabIndex = 5;
-        //dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
         // 
         // MainForm
         // 
         AutoScaleDimensions = new SizeF(10F, 25F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(872, 649);
+        ClientSize = new Size(861, 644);
         Controls.Add(dateTimePicker1);
         Controls.Add(label);
         Controls.Add(btnDelete);

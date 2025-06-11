@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\janek\\Desktop\\XpenseTracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|c:\\users\\janek\\desktop\\xpensetracker\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|c:\\users\\janek\\desktop\\xpensetracker\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|c:\\users\\janek\\desktop\\xpensetracker\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|c:\\users\\janek\\desktop\\xpensetracker\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|c:\\users\\janek\\desktop\\xpensetracker\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|solutionrelative:models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|c:\\users\\janek\\desktop\\xpensetracker\\addeditexpenseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|solutionrelative:addeditexpenseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|c:\\users\\janek\\desktop\\xpensetracker\\addeditexpenseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|solutionrelative:addeditexpenseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|c:\\users\\janek\\desktop\\xpensetracker\\addeditexpenseform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|solutionrelative:addeditexpenseform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|C:\\Users\\janek\\Desktop\\XpenseTracker\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|c:\\users\\janek\\desktop\\xpensetracker\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|c:\\users\\janek\\desktop\\xpensetracker\\xpensetracker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{ADB3B1C5-2E00-D5A2-1AB9-243F02C0C2E2}|XpenseTracker.csproj|solutionrelative:xpensetracker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\janek\\Desktop\\XpenseTracker\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
@@ -39,13 +63,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\janek\\Desktop\\XpenseTracker\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\janek\\Desktop\\XpenseTracker\\MainForm.cs",
               "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAgwDIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAawBwAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T01:41:17.948Z",
               "IsPinned": true,
@@ -53,13 +77,90 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\janek\\Desktop\\XpenseTracker\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\janek\\Desktop\\XpenseTracker\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T01:55:59.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Expense.cs",
+              "DocumentMoniker": "C:\\Users\\janek\\Desktop\\XpenseTracker\\Models\\Expense.cs",
+              "RelativeDocumentMoniker": "Models\\Expense.cs",
+              "ToolTip": "C:\\Users\\janek\\Desktop\\XpenseTracker\\Models\\Expense.cs",
+              "RelativeToolTip": "Models\\Expense.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T01:55:39.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddEditExpenseForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\janek\\Desktop\\XpenseTracker\\AddEditExpenseForm.cs",
+              "RelativeDocumentMoniker": "AddEditExpenseForm.cs",
+              "ToolTip": "C:\\Users\\janek\\Desktop\\XpenseTracker\\AddEditExpenseForm.cs [Design]",
+              "RelativeToolTip": "AddEditExpenseForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T01:17:59.424Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddEditExpenseForm.cs",
+              "DocumentMoniker": "C:\\Users\\janek\\Desktop\\XpenseTracker\\AddEditExpenseForm.cs",
+              "RelativeDocumentMoniker": "AddEditExpenseForm.cs",
+              "ToolTip": "C:\\Users\\janek\\Desktop\\XpenseTracker\\AddEditExpenseForm.cs",
+              "RelativeToolTip": "AddEditExpenseForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T01:21:07.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddEditExpenseForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\janek\\Desktop\\XpenseTracker\\AddEditExpenseForm.Designer.cs",
+              "RelativeDocumentMoniker": "AddEditExpenseForm.Designer.cs",
+              "ToolTip": "C:\\Users\\janek\\Desktop\\XpenseTracker\\AddEditExpenseForm.Designer.cs",
+              "RelativeToolTip": "AddEditExpenseForm.Designer.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAiwD8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T01:46:42.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "XpenseTracker",
+              "DocumentMoniker": "C:\\Users\\janek\\Desktop\\XpenseTracker\\XpenseTracker.csproj",
+              "RelativeDocumentMoniker": "XpenseTracker.csproj",
+              "ToolTip": "C:\\Users\\janek\\Desktop\\XpenseTracker\\XpenseTracker.csproj",
+              "RelativeToolTip": "XpenseTracker.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-11T01:17:23.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\janek\\Desktop\\XpenseTracker\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "MainForm.Designer.cs",
-              "ToolTip": "C:\\Users\\janek\\Desktop\\XpenseTracker\\MainForm.Designer.cs*",
-              "RelativeToolTip": "MainForm.Designer.cs*",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAAAF8AAAA3AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\janek\\Desktop\\XpenseTracker\\MainForm.Designer.cs",
+              "RelativeToolTip": "MainForm.Designer.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAF8AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T01:52:23.694Z",
               "EditorCaption": ""

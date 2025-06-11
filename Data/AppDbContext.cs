@@ -9,6 +9,8 @@ public class AppDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=xpense.db");
+        var dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "xpense.db");
+        optionsBuilder.UseSqlite($"Data Source={dbPath}");
     }
+
 }
