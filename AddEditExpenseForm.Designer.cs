@@ -106,9 +106,12 @@
             // 
             numAmount.BackColor = SystemColors.WindowFrame;
             numAmount.BorderStyle = BorderStyle.FixedSingle;
+            numAmount.DecimalPlaces = 2;
             numAmount.Font = new Font("Segoe UI", 10F);
             numAmount.ForeColor = SystemColors.MenuBar;
+            numAmount.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
             numAmount.Location = new Point(236, 132);
+            numAmount.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             numAmount.Name = "numAmount";
             numAmount.Size = new Size(203, 34);
             numAmount.TabIndex = 11;

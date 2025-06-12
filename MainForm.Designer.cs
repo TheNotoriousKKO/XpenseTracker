@@ -44,9 +44,8 @@ partial class MainForm
         dataGridViewExpenses.Location = new Point(12, 42);
         dataGridViewExpenses.Name = "dataGridViewExpenses";
         dataGridViewExpenses.RowHeadersWidth = 62;
-        dataGridViewExpenses.Size = new Size(837, 528);
+        dataGridViewExpenses.Size = new Size(745, 528);
         dataGridViewExpenses.TabIndex = 0;
-        dataGridViewExpenses.CellContentClick += dataGridView1_CellContentClick;
         // 
         // btnAdd
         // 
@@ -79,6 +78,7 @@ partial class MainForm
         btnDelete.TabIndex = 3;
         btnDelete.Text = "Delete";
         btnDelete.UseVisualStyleBackColor = true;
+        btnDelete.Click += btnDelete_Click;
         // 
         // label
         // 
@@ -102,7 +102,7 @@ partial class MainForm
         // 
         AutoScaleDimensions = new SizeF(10F, 25F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(861, 644);
+        ClientSize = new Size(769, 644);
         Controls.Add(dateTimePicker1);
         Controls.Add(label);
         Controls.Add(btnDelete);
@@ -111,6 +111,7 @@ partial class MainForm
         Controls.Add(dataGridViewExpenses);
         Name = "MainForm";
         Text = "MainForm";
+        Load += MainForm_Load;
         ((System.ComponentModel.ISupportInitialize)dataGridViewExpenses).EndInit();
         ResumeLayout(false);
         PerformLayout();

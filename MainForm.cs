@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using XpenseTracker.Data;
@@ -8,9 +9,15 @@ namespace XpenseTracker
 {
     public partial class MainForm : Form
     {
+        private List<Expense> _expenseCache = new();
+        private string _lastSortedColumn = "";
+        private bool _sortAscending = true;
+
         public MainForm()
         {
             InitializeComponent();
+            this.Load += MainForm_Load;
+            this.dataGridViewExpenses.ColumnHeaderMouseClick += DataGridViewExpenses_ColumnHeaderMouseClick;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -21,14 +28,53 @@ namespace XpenseTracker
         private void LoadExpenses()
         {
             using var db = new AppDbContext();
-            var expenses = db.Expenses
-                .OrderByDescending(e => e.Date)
-                .ToList();
+            _expenseCache = db.Expenses.ToList();
 
+            dataGridViewExpenses.AutoGenerateColumns = true;
             dataGridViewExpenses.DataSource = null;
-            dataGridViewExpenses.DataSource = expenses;
+            dataGridViewExpenses.DataSource = _expenseCache;
 
             dataGridViewExpenses.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            if (dataGridViewExpenses.Columns["Id"] != null)
+            {
+                dataGridViewExpenses.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                dataGridViewExpenses.Columns["Id"].Width = 60;
+            }
+
+        }
+
+        private void DataGridViewExpenses_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string columnName = dataGridViewExpenses.Columns[e.ColumnIndex].DataPropertyName;
+
+            if (_lastSortedColumn == columnName)
+                _sortAscending = !_sortAscending;
+            else
+                _sortAscending = true;
+
+            _lastSortedColumn = columnName;
+
+            var sorted = _sortAscending
+                ? _expenseCache.OrderBy(x => GetPropertyValue(x, columnName)).ToList()
+                : _expenseCache.OrderByDescending(x => GetPropertyValue(x, columnName)).ToList();
+
+            dataGridViewExpenses.DataSource = sorted;
+
+            // Reset glyphs
+            foreach (DataGridViewColumn col in dataGridViewExpenses.Columns)
+            {
+                col.HeaderCell.SortGlyphDirection = SortOrder.None;
+            }
+
+            // Apply glyph to the clicked column
+            var sortOrder = _sortAscending ? SortOrder.Ascending : SortOrder.Descending;
+            dataGridViewExpenses.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection = sortOrder;
+        }
+
+        private object? GetPropertyValue(Expense expense, string propertyName)
+        {
+            return typeof(Expense).GetProperty(propertyName)?.GetValue(expense, null);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -40,10 +86,9 @@ namespace XpenseTracker
                 using var db = new AppDbContext();
                 db.Expenses.Add(newExpense);
                 db.SaveChanges();
-                LoadExpenses(); // refresh UI
+                LoadExpenses();
             }
         }
-
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -72,7 +117,6 @@ namespace XpenseTracker
             }
         }
 
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dataGridViewExpenses.CurrentRow?.DataBoundItem is not Expense selectedExpense)
@@ -89,11 +133,6 @@ namespace XpenseTracker
                 db.SaveChanges();
                 LoadExpenses();
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // TODO: Add your logic here, e.g., handle cell clicks
         }
     }
 }
