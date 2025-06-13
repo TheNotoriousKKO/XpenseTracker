@@ -2,15 +2,8 @@
 
 partial class MainForm
 {
-    /// <summary>
-    ///  Required designer variable.
-    /// </summary>
     private System.ComponentModel.IContainer components = null;
 
-    /// <summary>
-    ///  Clean up any resources being used.
-    /// </summary>
-    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
     protected override void Dispose(bool disposing)
     {
         if (disposing && (components != null))
@@ -22,104 +15,108 @@ partial class MainForm
 
     #region Windows Form Designer generated code
 
-    /// <summary>
-    ///  Required method for Designer support - do not modify
-    ///  the contents of this method with the code editor.
-    /// </summary>
     private void InitializeComponent()
     {
         dataGridViewExpenses = new DataGridView();
+        panelBottom = new Panel();
         btnAdd = new Button();
         btnEdit = new Button();
         btnDelete = new Button();
         label = new Label();
         dateTimePicker1 = new DateTimePicker();
+
         ((System.ComponentModel.ISupportInitialize)dataGridViewExpenses).BeginInit();
+        panelBottom.SuspendLayout();
         SuspendLayout();
+
         // 
         // dataGridViewExpenses
         // 
-        dataGridViewExpenses.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+        dataGridViewExpenses.Dock = DockStyle.Fill;
         dataGridViewExpenses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dataGridViewExpenses.Location = new Point(12, 42);
+        dataGridViewExpenses.Location = new Point(0, 50);
         dataGridViewExpenses.Name = "dataGridViewExpenses";
         dataGridViewExpenses.RowHeadersWidth = 62;
-        dataGridViewExpenses.Size = new Size(745, 528);
         dataGridViewExpenses.TabIndex = 0;
+
+        // 
+        // panelBottom
+        // 
+        panelBottom.Dock = DockStyle.Bottom;
+        panelBottom.Height = 60;
+        panelBottom.Padding = new Padding(10);
+        panelBottom.BackColor = SystemColors.Control;
+        panelBottom.Controls.Add(btnAdd);
+        panelBottom.Controls.Add(btnEdit);
+        panelBottom.Controls.Add(btnDelete);
+        panelBottom.Controls.Add(dateTimePicker1);
+
         // 
         // btnAdd
         // 
-        btnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-        btnAdd.Location = new Point(12, 576);
-        btnAdd.Name = "btnAdd";
-        btnAdd.Size = new Size(99, 31);
-        btnAdd.TabIndex = 1;
+        btnAdd.Location = new Point(10, 10);
+        btnAdd.Size = new Size(80, 35);
         btnAdd.Text = "Add";
         btnAdd.UseVisualStyleBackColor = true;
         btnAdd.Click += btnAdd_Click;
+
         // 
         // btnEdit
         // 
-        btnEdit.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-        btnEdit.Location = new Point(117, 576);
-        btnEdit.Name = "btnEdit";
-        btnEdit.Size = new Size(99, 31);
-        btnEdit.TabIndex = 2;
+        btnEdit.Location = new Point(100, 10);
+        btnEdit.Size = new Size(80, 35);
         btnEdit.Text = "Edit";
         btnEdit.UseVisualStyleBackColor = true;
         btnEdit.Click += btnEdit_Click;
+
         // 
         // btnDelete
         // 
-        btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-        btnDelete.Location = new Point(222, 576);
-        btnDelete.Name = "btnDelete";
-        btnDelete.Size = new Size(99, 31);
-        btnDelete.TabIndex = 3;
+        btnDelete.Location = new Point(190, 10);
+        btnDelete.Size = new Size(80, 35);
         btnDelete.Text = "Delete";
         btnDelete.UseVisualStyleBackColor = true;
         btnDelete.Click += btnDelete_Click;
-        // 
-        // label
-        // 
-        label.AutoSize = true;
-        label.Font = new Font("Franklin Gothic Demi", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
-        label.Location = new Point(12, 9);
-        label.Name = "label";
-        label.Size = new Size(175, 30);
-        label.TabIndex = 4;
-        label.Text = "Expenses Table";
+
         // 
         // dateTimePicker1
         // 
-        dateTimePicker1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-        dateTimePicker1.Location = new Point(327, 576);
-        dateTimePicker1.Name = "dateTimePicker1";
-        dateTimePicker1.Size = new Size(379, 31);
-        dateTimePicker1.TabIndex = 5;
+        dateTimePicker1.Location = new Point(290, 15);
+        dateTimePicker1.Size = new Size(250, 31);
+
+        // 
+        // label
+        // 
+        label.Dock = DockStyle.Top;
+        label.Text = "Expenses Table";
+        label.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+        label.TextAlign = ContentAlignment.MiddleCenter;
+        label.Height = 50;
+
         // 
         // MainForm
         // 
         AutoScaleDimensions = new SizeF(10F, 25F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(769, 644);
-        Controls.Add(dateTimePicker1);
-        Controls.Add(label);
-        Controls.Add(btnDelete);
-        Controls.Add(btnEdit);
-        Controls.Add(btnAdd);
+        ClientSize = new Size(800, 600);
+        MinimumSize = new Size(800, 600);
+        StartPosition = FormStartPosition.CenterScreen;
         Controls.Add(dataGridViewExpenses);
+        Controls.Add(panelBottom);
+        Controls.Add(label);
         Name = "MainForm";
-        Text = "MainForm";
+        Text = "Xpense Tracker";
         Load += MainForm_Load;
+
         ((System.ComponentModel.ISupportInitialize)dataGridViewExpenses).EndInit();
+        panelBottom.ResumeLayout(false);
         ResumeLayout(false);
-        PerformLayout();
     }
 
     #endregion
 
     private DataGridView dataGridViewExpenses;
+    private Panel panelBottom;
     private Button btnAdd;
     private Button btnEdit;
     private Button btnDelete;

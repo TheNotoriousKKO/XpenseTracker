@@ -20,7 +20,7 @@ namespace XpenseTracker
             this.dataGridViewExpenses.ColumnHeaderMouseClick += DataGridViewExpenses_ColumnHeaderMouseClick;
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void MainForm_Load(object? sender, EventArgs e)
         {
             LoadExpenses();
         }
@@ -36,15 +36,16 @@ namespace XpenseTracker
 
             dataGridViewExpenses.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            if (dataGridViewExpenses.Columns["Id"] != null)
-            {
-                dataGridViewExpenses.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                dataGridViewExpenses.Columns["Id"].Width = 60;
-            }
+            // Column formatting (optional: wrap in try-catch if unsure)
+            if (dataGridViewExpenses.Columns["Amount"] != null)
+                dataGridViewExpenses.Columns["Amount"].DefaultCellStyle.Format = "C2";
 
+            if (dataGridViewExpenses.Columns["Date"] != null)
+                dataGridViewExpenses.Columns["Date"].DefaultCellStyle.Format = "yyyy-MM-dd";
         }
 
-        private void DataGridViewExpenses_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+
+        private void DataGridViewExpenses_ColumnHeaderMouseClick(object? sender, DataGridViewCellMouseEventArgs e)
         {
             string columnName = dataGridViewExpenses.Columns[e.ColumnIndex].DataPropertyName;
 

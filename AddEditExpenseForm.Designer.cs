@@ -2,195 +2,184 @@
 {
     partial class AddEditExpenseForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            label = new Label();
+            panelMain = new Panel();
+            labelTitle = new Label();
+            labelCategory = new Label();
             txtCategory = new TextBox();
-            Category = new Label();
-            label1 = new Label();
+            labelDescription = new Label();
             txtDescription = new TextBox();
-            dtDate = new DateTimePicker();
+            labelAmount = new Label();
             numAmount = new NumericUpDown();
-            label2 = new Label();
-            label3 = new Label();
-            btnCancel = new Button();
+            labelDate = new Label();
+            dtDate = new DateTimePicker();
             btnSave = new Button();
+            btnCancel = new Button();
+            panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numAmount).BeginInit();
             SuspendLayout();
             // 
-            // label
+            // panelMain
             // 
-            label.AutoSize = true;
-            label.Font = new Font("Franklin Gothic Demi", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label.Location = new Point(12, 9);
-            label.Name = "label";
-            label.Size = new Size(147, 30);
-            label.TabIndex = 5;
-            label.Text = "Add expense";
+            panelMain.BackColor = SystemColors.Control;
+            panelMain.Controls.Add(labelTitle);
+            panelMain.Controls.Add(labelCategory);
+            panelMain.Controls.Add(txtCategory);
+            panelMain.Controls.Add(labelDescription);
+            panelMain.Controls.Add(txtDescription);
+            panelMain.Controls.Add(labelAmount);
+            panelMain.Controls.Add(numAmount);
+            panelMain.Controls.Add(labelDate);
+            panelMain.Controls.Add(dtDate);
+            panelMain.Controls.Add(btnSave);
+            panelMain.Controls.Add(btnCancel);
+            panelMain.Dock = DockStyle.Fill;
+            panelMain.Location = new Point(0, 0);
+            panelMain.Name = "panelMain";
+            panelMain.Padding = new Padding(20);
+            panelMain.Size = new Size(430, 300);
+            panelMain.TabIndex = 0;
+            // 
+            // labelTitle
+            // 
+            labelTitle.Font = new Font("Franklin Gothic Demi", 14F, FontStyle.Italic);
+            labelTitle.Location = new Point(10, 10);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(300, 35);
+            labelTitle.TabIndex = 0;
+            labelTitle.Text = "Add Expense";
+            // 
+            // labelCategory
+            // 
+            labelCategory.Location = new Point(10, 60);
+            labelCategory.Name = "labelCategory";
+            labelCategory.Size = new Size(134, 30);
+            labelCategory.TabIndex = 1;
+            labelCategory.Text = "Category";
             // 
             // txtCategory
             // 
-            txtCategory.BackColor = SystemColors.WindowFrame;
+            txtCategory.BackColor = SystemColors.Window;
             txtCategory.BorderStyle = BorderStyle.FixedSingle;
             txtCategory.Font = new Font("Segoe UI", 10F);
-            txtCategory.ForeColor = SystemColors.MenuBar;
-            txtCategory.Location = new Point(236, 52);
+            txtCategory.ForeColor = SystemColors.ControlText;
+            txtCategory.Location = new Point(150, 60);
             txtCategory.Name = "txtCategory";
-            txtCategory.Size = new Size(203, 34);
-            txtCategory.TabIndex = 6;
+            txtCategory.Size = new Size(250, 34);
+            txtCategory.TabIndex = 2;
             // 
-            // Category
+            // labelDescription
             // 
-            Category.AutoSize = true;
-            Category.Font = new Font("Segoe UI", 10F);
-            Category.Location = new Point(12, 52);
-            Category.Name = "Category";
-            Category.Size = new Size(92, 28);
-            Category.TabIndex = 7;
-            Category.Text = "Category";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F);
-            label1.Location = new Point(12, 92);
-            label1.Name = "label1";
-            label1.Size = new Size(112, 28);
-            label1.TabIndex = 9;
-            label1.Text = "Description";
+            labelDescription.Location = new Point(10, 100);
+            labelDescription.Name = "labelDescription";
+            labelDescription.Size = new Size(134, 30);
+            labelDescription.TabIndex = 3;
+            labelDescription.Text = "Description";
             // 
             // txtDescription
             // 
-            txtDescription.BackColor = SystemColors.WindowFrame;
             txtDescription.BorderStyle = BorderStyle.FixedSingle;
             txtDescription.Font = new Font("Segoe UI", 10F);
-            txtDescription.ForeColor = SystemColors.MenuBar;
-            txtDescription.Location = new Point(236, 92);
+            txtDescription.ForeColor = SystemColors.ControlText;
+            txtDescription.Location = new Point(150, 100);
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(203, 34);
-            txtDescription.TabIndex = 8;
+            txtDescription.Size = new Size(250, 34);
+            txtDescription.TabIndex = 4;
             // 
-            // dtDate
+            // labelAmount
             // 
-            dtDate.Font = new Font("Segoe UI", 10F);
-            dtDate.Location = new Point(236, 172);
-            dtDate.Name = "dtDate";
-            dtDate.Size = new Size(203, 34);
-            dtDate.TabIndex = 10;
+            labelAmount.Location = new Point(10, 140);
+            labelAmount.Name = "labelAmount";
+            labelAmount.Size = new Size(134, 30);
+            labelAmount.TabIndex = 5;
+            labelAmount.Text = "Amount";
             // 
             // numAmount
             // 
-            numAmount.BackColor = SystemColors.WindowFrame;
             numAmount.BorderStyle = BorderStyle.FixedSingle;
             numAmount.DecimalPlaces = 2;
             numAmount.Font = new Font("Segoe UI", 10F);
-            numAmount.ForeColor = SystemColors.MenuBar;
-            numAmount.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
-            numAmount.Location = new Point(236, 132);
-            numAmount.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
+            numAmount.Increment = new decimal(0.1);
+            numAmount.Location = new Point(150, 140);
+            numAmount.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
             numAmount.Name = "numAmount";
-            numAmount.Size = new Size(203, 34);
-            numAmount.TabIndex = 11;
+            numAmount.Size = new Size(250, 34);
+            numAmount.TabIndex = 6;
             // 
-            // label2
+            // labelDate
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10F);
-            label2.Location = new Point(12, 172);
-            label2.Name = "label2";
-            label2.Size = new Size(53, 28);
-            label2.TabIndex = 13;
-            label2.Text = "Date";
+            labelDate.Location = new Point(10, 180);
+            labelDate.Name = "labelDate";
+            labelDate.Size = new Size(134, 30);
+            labelDate.TabIndex = 7;
+            labelDate.Text = "Date";
             // 
-            // label3
+            // dtDate
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10F);
-            label3.Location = new Point(12, 132);
-            label3.Name = "label3";
-            label3.Size = new Size(83, 28);
-            label3.TabIndex = 12;
-            label3.Text = "Amount";
-            // 
-            // btnCancel
-            // 
-            btnCancel.Location = new Point(236, 228);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(203, 34);
-            btnCancel.TabIndex = 14;
-            btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = true;
-            btnCancel.Click += btnCancel_Click;
+            dtDate.CalendarTitleBackColor = Color.PowderBlue;
+            dtDate.Font = new Font("Segoe UI", 10F);
+            dtDate.Location = new Point(150, 180);
+            dtDate.Name = "dtDate";
+            dtDate.Size = new Size(250, 34);
+            dtDate.TabIndex = 8;
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(12, 228);
+            btnSave.Location = new Point(10, 230);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(203, 34);
-            btnSave.TabIndex = 15;
+            btnSave.Size = new Size(190, 35);
+            btnSave.TabIndex = 9;
             btnSave.Text = "Save";
-            btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += btnSave_Click;
+            // 
+            // btnCancel
+            // 
+            btnCancel.Location = new Point(210, 230);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(190, 35);
+            btnCancel.TabIndex = 10;
+            btnCancel.Text = "Cancel";
+            btnCancel.Click += btnCancel_Click;
             // 
             // AddEditExpenseForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(451, 285);
-            Controls.Add(btnSave);
-            Controls.Add(btnCancel);
-            Controls.Add(label2);
-            Controls.Add(label3);
-            Controls.Add(numAmount);
-            Controls.Add(dtDate);
-            Controls.Add(label1);
-            Controls.Add(txtDescription);
-            Controls.Add(Category);
-            Controls.Add(txtCategory);
-            Controls.Add(label);
+            ClientSize = new Size(430, 300);
+            Controls.Add(panelMain);
             Name = "AddEditExpenseForm";
-            Text = "AddEditExpenseForm";
+            Text = "Add/Edit Expense";
+            panelMain.ResumeLayout(false);
+            panelMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numAmount).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label;
+        private Panel panelMain;
+        private Label labelTitle;
+        private Label labelCategory;
         private TextBox txtCategory;
-        private Label Category;
-        private Label label1;
+        private Label labelDescription;
         private TextBox txtDescription;
-        private DateTimePicker dtDate;
+        private Label labelAmount;
         private NumericUpDown numAmount;
-        private Label label2;
-        private Label label3;
-        private Button btnCancel;
+        private Label labelDate;
+        private DateTimePicker dtDate;
         private Button btnSave;
+        private Button btnCancel;
     }
 }
