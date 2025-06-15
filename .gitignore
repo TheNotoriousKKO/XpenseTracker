@@ -1,0 +1,30 @@
+# Build outputs
+bin/
+obj/
+publish/
+
+# VS + Rider user files
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# SQLite DB - ignore local test copies
+*.db
+*.db-shm
+*.db-wal
+
+# Logs, crashes, etc.
+*.log
+
+# System/macOS cruft
+.DS_Store
+Thumbs.db
+
+# Excel export outputs (optional)
+*.xlsx
+
+# Rider/JetBrains config (optional)
+*.DotSettings

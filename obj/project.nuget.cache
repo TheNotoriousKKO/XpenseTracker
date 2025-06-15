@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "I4Fvk5P1Cu0=",
+  "dgSpecHash": "6IvX1dlrE7U=",
   "success": true,
   "projectFilePath": "C:\\Users\\janek\\Desktop\\XpenseTracker\\XpenseTracker.csproj",
   "expectedPackageFiles": [
@@ -37,6 +37,7 @@
     "C:\\Users\\janek\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.5\\microsoft.extensions.logging.abstractions.9.0.5.nupkg.sha512",
     "C:\\Users\\janek\\.nuget\\packages\\microsoft.extensions.options\\9.0.5\\microsoft.extensions.options.9.0.5.nupkg.sha512",
     "C:\\Users\\janek\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.5\\microsoft.extensions.primitives.9.0.5.nupkg.sha512",
+    "C:\\Users\\janek\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.16\\microsoft.net.illink.tasks.8.0.16.nupkg.sha512",
     "C:\\Users\\janek\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\janek\\.nuget\\packages\\rbush.signed\\4.0.0\\rbush.signed.4.0.0.nupkg.sha512",
     "C:\\Users\\janek\\.nuget\\packages\\sixlabors.fonts\\1.0.0\\sixlabors.fonts.1.0.0.nupkg.sha512",
@@ -60,7 +61,10 @@
     "C:\\Users\\janek\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\janek\\.nuget\\packages\\system.text.encodings.web\\9.0.5\\system.text.encodings.web.9.0.5.nupkg.sha512",
     "C:\\Users\\janek\\.nuget\\packages\\system.text.json\\9.0.5\\system.text.json.9.0.5.nupkg.sha512",
-    "C:\\Users\\janek\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
+    "C:\\Users\\janek\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
+    "C:\\Users\\janek\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.16\\microsoft.netcore.app.runtime.win-x64.8.0.16.nupkg.sha512",
+    "C:\\Users\\janek\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.16\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.16.nupkg.sha512",
+    "C:\\Users\\janek\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.16\\microsoft.aspnetcore.app.runtime.win-x64.8.0.16.nupkg.sha512"
   ],
   "logs": []
 }
