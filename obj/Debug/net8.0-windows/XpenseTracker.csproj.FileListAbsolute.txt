@@ -144,3 +144,11 @@ C:\Users\janek\Desktop\XpenseTracker\obj\Debug\net8.0-windows\refint\XpenseTrack
 C:\Users\janek\Desktop\XpenseTracker\obj\Debug\net8.0-windows\XpenseTracker.pdb
 C:\Users\janek\Desktop\XpenseTracker\obj\Debug\net8.0-windows\XpenseTracker.genruntimeconfig.cache
 C:\Users\janek\Desktop\XpenseTracker\obj\Debug\net8.0-windows\ref\XpenseTracker.dll
+C:\Users\janek\Desktop\XpenseTracker\bin\Debug\net8.0-windows\ClosedXML.dll
+C:\Users\janek\Desktop\XpenseTracker\bin\Debug\net8.0-windows\ClosedXML.Parser.dll
+C:\Users\janek\Desktop\XpenseTracker\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+C:\Users\janek\Desktop\XpenseTracker\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+C:\Users\janek\Desktop\XpenseTracker\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+C:\Users\janek\Desktop\XpenseTracker\bin\Debug\net8.0-windows\RBush.dll
+C:\Users\janek\Desktop\XpenseTracker\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+C:\Users\janek\Desktop\XpenseTracker\bin\Debug\net8.0-windows\System.IO.Packaging.dll

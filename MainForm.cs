@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using System.Drawing;
 using XpenseTracker.Data;
 using XpenseTracker.Models;
+using ClosedXML.Excel;
 
 namespace XpenseTracker
 {
@@ -17,7 +19,7 @@ namespace XpenseTracker
         {
             InitializeComponent();
             this.Load += MainForm_Load;
-            this.dataGridViewExpenses.ColumnHeaderMouseClick += DataGridViewExpenses_ColumnHeaderMouseClick;
+            dataGridViewExpenses.ColumnHeaderMouseClick += DataGridViewExpenses_ColumnHeaderMouseClick;
         }
 
         private void MainForm_Load(object? sender, EventArgs e)
@@ -36,14 +38,12 @@ namespace XpenseTracker
 
             dataGridViewExpenses.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            // Column formatting (optional: wrap in try-catch if unsure)
             if (dataGridViewExpenses.Columns["Amount"] != null)
                 dataGridViewExpenses.Columns["Amount"].DefaultCellStyle.Format = "C2";
 
             if (dataGridViewExpenses.Columns["Date"] != null)
                 dataGridViewExpenses.Columns["Date"].DefaultCellStyle.Format = "yyyy-MM-dd";
         }
-
 
         private void DataGridViewExpenses_ColumnHeaderMouseClick(object? sender, DataGridViewCellMouseEventArgs e)
         {
@@ -62,20 +62,16 @@ namespace XpenseTracker
 
             dataGridViewExpenses.DataSource = sorted;
 
-            // Reset glyphs
             foreach (DataGridViewColumn col in dataGridViewExpenses.Columns)
-            {
                 col.HeaderCell.SortGlyphDirection = SortOrder.None;
-            }
 
-            // Apply glyph to the clicked column
             var sortOrder = _sortAscending ? SortOrder.Ascending : SortOrder.Descending;
             dataGridViewExpenses.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection = sortOrder;
         }
 
         private object? GetPropertyValue(Expense expense, string propertyName)
         {
-            return typeof(Expense).GetProperty(propertyName)?.GetValue(expense, null);
+            return typeof(Expense).GetProperty(propertyName)?.GetValue(expense);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -83,9 +79,8 @@ namespace XpenseTracker
             var form = new AddEditExpenseForm();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                var newExpense = form.GetExpense();
                 using var db = new AppDbContext();
-                db.Expenses.Add(newExpense);
+                db.Expenses.Add(form.GetExpense());
                 db.SaveChanges();
                 LoadExpenses();
             }
@@ -134,6 +129,40 @@ namespace XpenseTracker
                 db.SaveChanges();
                 LoadExpenses();
             }
+        }
+
+        private void btnExport_Click(object? sender, EventArgs e)
+        {
+            using var dialog = new SaveFileDialog
+            {
+                Filter = "Excel Workbook (*.xlsx)|*.xlsx",
+                FileName = $"Expenses_{DateTime.Now:yyyyMMdd_HHmm}.xlsx"
+            };
+
+            if (dialog.ShowDialog() != DialogResult.OK)
+                return;
+
+            using var workbook = new XLWorkbook();
+            var ws = workbook.Worksheets.Add("Expenses");
+
+            ws.Cell(1, 1).Value = "Category";
+            ws.Cell(1, 2).Value = "Description";
+            ws.Cell(1, 3).Value = "Amount";
+            ws.Cell(1, 4).Value = "Date";
+            ws.Row(1).Style.Font.Bold = true;
+
+            for (int i = 0; i < _expenseCache.Count; i++)
+            {
+                var expense = _expenseCache[i];
+                ws.Cell(i + 2, 1).Value = expense.Category;
+                ws.Cell(i + 2, 2).Value = expense.Description;
+                ws.Cell(i + 2, 3).Value = expense.Amount;
+                ws.Cell(i + 2, 4).Value = expense.Date.ToShortDateString();
+            }
+
+
+            workbook.SaveAs(dialog.FileName);
+            MessageBox.Show("Export complete.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

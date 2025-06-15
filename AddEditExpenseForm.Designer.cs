@@ -16,9 +16,9 @@
         private void InitializeComponent()
         {
             panelMain = new Panel();
+            cmbCategory = new ComboBox();
             labelTitle = new Label();
             labelCategory = new Label();
-            txtCategory = new TextBox();
             labelDescription = new Label();
             txtDescription = new TextBox();
             labelAmount = new Label();
@@ -34,9 +34,9 @@
             // panelMain
             // 
             panelMain.BackColor = SystemColors.Control;
+            panelMain.Controls.Add(cmbCategory);
             panelMain.Controls.Add(labelTitle);
             panelMain.Controls.Add(labelCategory);
-            panelMain.Controls.Add(txtCategory);
             panelMain.Controls.Add(labelDescription);
             panelMain.Controls.Add(txtDescription);
             panelMain.Controls.Add(labelAmount);
@@ -51,6 +51,14 @@
             panelMain.Padding = new Padding(20);
             panelMain.Size = new Size(430, 300);
             panelMain.TabIndex = 0;
+            // 
+            // cmbCategory
+            // 
+            cmbCategory.FormattingEnabled = true;
+            cmbCategory.Location = new Point(150, 57);
+            cmbCategory.Name = "cmbCategory";
+            cmbCategory.Size = new Size(250, 33);
+            cmbCategory.TabIndex = 11;
             // 
             // labelTitle
             // 
@@ -68,17 +76,6 @@
             labelCategory.Size = new Size(134, 30);
             labelCategory.TabIndex = 1;
             labelCategory.Text = "Category";
-            // 
-            // txtCategory
-            // 
-            txtCategory.BackColor = SystemColors.Window;
-            txtCategory.BorderStyle = BorderStyle.FixedSingle;
-            txtCategory.Font = new Font("Segoe UI", 10F);
-            txtCategory.ForeColor = SystemColors.ControlText;
-            txtCategory.Location = new Point(150, 60);
-            txtCategory.Name = "txtCategory";
-            txtCategory.Size = new Size(250, 34);
-            txtCategory.TabIndex = 2;
             // 
             // labelDescription
             // 
@@ -111,7 +108,7 @@
             numAmount.BorderStyle = BorderStyle.FixedSingle;
             numAmount.DecimalPlaces = 2;
             numAmount.Font = new Font("Segoe UI", 10F);
-            numAmount.Increment = new decimal(0.1);
+            numAmount.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
             numAmount.Location = new Point(150, 140);
             numAmount.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
             numAmount.Name = "numAmount";
@@ -172,7 +169,6 @@
         private Panel panelMain;
         private Label labelTitle;
         private Label labelCategory;
-        private TextBox txtCategory;
         private Label labelDescription;
         private TextBox txtDescription;
         private Label labelAmount;
@@ -181,5 +177,6 @@
         private DateTimePicker dtDate;
         private Button btnSave;
         private Button btnCancel;
+        private ComboBox cmbCategory;
     }
 }
