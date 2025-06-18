@@ -43,6 +43,10 @@ namespace XpenseTracker
 
             if (dataGridViewExpenses.Columns["Date"] != null)
                 dataGridViewExpenses.Columns["Date"].DefaultCellStyle.Format = "yyyy-MM-dd";
+            
+            if (dataGridViewExpenses.Columns["Id"] != null)
+                dataGridViewExpenses.Columns["Id"].Width = 60;
+
         }
 
         private void DataGridViewExpenses_ColumnHeaderMouseClick(object? sender, DataGridViewCellMouseEventArgs e)
@@ -164,5 +168,28 @@ namespace XpenseTracker
             workbook.SaveAs(dialog.FileName);
             MessageBox.Show("Export complete.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnExportCsv_Click(object sender, EventArgs e)
+        {
+            using var dialog = new SaveFileDialog
+            {
+                Filter = "CSV files (*.csv)|*.csv",
+                FileName = $"Expenses_{DateTime.Now:yyyyMMdd_HHmm}.csv"
+            };
+
+            if (dialog.ShowDialog() != DialogResult.OK)
+                return;
+
+            using var writer = new StreamWriter(dialog.FileName);
+            writer.WriteLine("Category,Description,Amount,Date");
+
+            foreach (var expense in _expenseCache)
+            {
+                writer.WriteLine($"\"{expense.Category}\",\"{expense.Description}\",{expense.Amount},{expense.Date:yyyy-MM-dd}");
+            }
+
+            MessageBox.Show("CSV Export complete.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
     }
 }

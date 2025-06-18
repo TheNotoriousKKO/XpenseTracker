@@ -25,6 +25,7 @@ partial class MainForm
         btnDelete = new Button();
         dateTimePicker1 = new DateTimePicker();
         label = new Label();
+        btnExportCsv = new Button();
         ((System.ComponentModel.ISupportInitialize)dataGridViewExpenses).BeginInit();
         panelBottom.SuspendLayout();
         SuspendLayout();
@@ -36,39 +37,30 @@ partial class MainForm
         dataGridViewExpenses.Location = new Point(0, 50);
         dataGridViewExpenses.Name = "dataGridViewExpenses";
         dataGridViewExpenses.RowHeadersWidth = 62;
-        dataGridViewExpenses.Size = new Size(800, 490);
+        dataGridViewExpenses.Size = new Size(1013, 495);
         dataGridViewExpenses.TabIndex = 0;
         // 
         // panelBottom
         // 
         panelBottom.BackColor = SystemColors.Control;
+        panelBottom.Controls.Add(btnExportCsv);
         panelBottom.Controls.Add(btnExport);
         panelBottom.Controls.Add(btnAdd);
         panelBottom.Controls.Add(btnEdit);
         panelBottom.Controls.Add(btnDelete);
         panelBottom.Controls.Add(dateTimePicker1);
         panelBottom.Dock = DockStyle.Bottom;
-        panelBottom.Location = new Point(0, 540);
+        panelBottom.Location = new Point(0, 545);
         panelBottom.Name = "panelBottom";
         panelBottom.Padding = new Padding(10);
-        panelBottom.Size = new Size(800, 60);
+        panelBottom.Size = new Size(1013, 60);
         panelBottom.TabIndex = 1;
-        // 
-        // btnExport
-        // 
-        btnExport.Location = new Point(632, 13);
-        btnExport.Name = "btnExport";
-        btnExport.Size = new Size(155, 35);
-        btnExport.TabIndex = 4;
-        btnExport.Text = "Export";
-        btnExport.UseVisualStyleBackColor = true;
-        btnExport.Click += btnExport_Click;
         // 
         // btnAdd
         // 
-        btnAdd.Location = new Point(10, 10);
+        btnAdd.Location = new Point(10, 12);
         btnAdd.Name = "btnAdd";
-        btnAdd.Size = new Size(80, 35);
+        btnAdd.Size = new Size(113, 35);
         btnAdd.TabIndex = 0;
         btnAdd.Text = "Add";
         btnAdd.UseVisualStyleBackColor = true;
@@ -76,9 +68,9 @@ partial class MainForm
         // 
         // btnEdit
         // 
-        btnEdit.Location = new Point(100, 10);
+        btnEdit.Location = new Point(133, 12);
         btnEdit.Name = "btnEdit";
-        btnEdit.Size = new Size(80, 35);
+        btnEdit.Size = new Size(113, 35);
         btnEdit.TabIndex = 1;
         btnEdit.Text = "Edit";
         btnEdit.UseVisualStyleBackColor = true;
@@ -86,9 +78,9 @@ partial class MainForm
         // 
         // btnDelete
         // 
-        btnDelete.Location = new Point(190, 10);
+        btnDelete.Location = new Point(256, 12);
         btnDelete.Name = "btnDelete";
-        btnDelete.Size = new Size(80, 35);
+        btnDelete.Size = new Size(113, 35);
         btnDelete.TabIndex = 2;
         btnDelete.Text = "Delete";
         btnDelete.UseVisualStyleBackColor = true;
@@ -96,27 +88,37 @@ partial class MainForm
         // 
         // dateTimePicker1
         // 
-        dateTimePicker1.Location = new Point(290, 15);
+        dateTimePicker1.Location = new Point(379, 15);
         dateTimePicker1.Name = "dateTimePicker1";
-        dateTimePicker1.Size = new Size(250, 31);
+        dateTimePicker1.Size = new Size(200, 31);
         dateTimePicker1.TabIndex = 3;
         // 
-        // label
+        // btnExportCsv
         // 
-        label.Dock = DockStyle.Top;
-        label.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-        label.Location = new Point(0, 0);
-        label.Name = "label";
-        label.Size = new Size(800, 50);
-        label.TabIndex = 2;
-        label.Text = "Expenses Table";
-        label.TextAlign = ContentAlignment.MiddleCenter;
+        btnExportCsv.Location = new Point(585, 12);
+        btnExportCsv.Name = "btnExportCsv";
+        btnExportCsv.Size = new Size(113, 35);
+        btnExportCsv.TabIndex = 4;
+        btnExportCsv.Text = "Export CSV";
+        btnExportCsv.UseVisualStyleBackColor = true;
+        btnExportCsv.Click += btnExportCsv_Click;
+        // 
+        // btnExport
+        // 
+        btnExport.Location = new Point(708, 12);
+        btnExport.Name = "btnExport";
+        btnExport.Size = new Size(113, 35);
+        btnExport.TabIndex = 5;
+        btnExport.Text = "Export Excel";
+        btnExport.UseVisualStyleBackColor = true;
+        btnExport.Click += btnExport_Click;
+
         // 
         // MainForm
         // 
         AutoScaleDimensions = new SizeF(10F, 25F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(800, 600);
+        ClientSize = new Size(830, 550);
         Controls.Add(dataGridViewExpenses);
         Controls.Add(panelBottom);
         Controls.Add(label);
@@ -140,4 +142,5 @@ partial class MainForm
     private Label label;
     private DateTimePicker dateTimePicker1;
     private Button btnExport;
+    private Button btnExportCsv;
 }
